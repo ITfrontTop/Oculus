@@ -1,0 +1,16 @@
+a {
+    color: inherit;
+}
+
+body {
+    @extend %helvetica-400;
+    font-size: 16px;
+    line-height: 1.4;
+    color: #5C5C5E;
+}
+
+.container {
+    max-width: 1220px;
+    padding: 0 10px;
+    margin: 0 auto;
+}
