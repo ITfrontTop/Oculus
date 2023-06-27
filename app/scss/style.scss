@@ -11,10 +11,11 @@
 }
 
 .nav {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     align-items: center;
     height: 80px;
+    
 }
 
 .menu {
@@ -22,8 +23,16 @@
     gap: 0 20px;
 }
 
-.basket--on {
+.logo {
+    justify-self: center;
+}
+
+.basket {
     position: relative;
+    justify-self: end;
+}
+
+.basket--on {
     span {
         font-size: 11px;
         width: 15px;
@@ -53,6 +62,7 @@
     padding-top: 16%;
     font-size: 96px;
     margin-bottom: 10px;
+    @extend %helvetica-400;
 }
 
 .subtitle {
@@ -83,9 +93,81 @@
 .buy-btn__text {
     color: #F6F4F5;
     padding: 20px 110px;
+    text-transform: uppercase;
 }
 
 .buy-btn__price {
     background-color: #F6F4F5;
     padding: 20px 105px;
+}
+
+/*section features*/
+.features {
+    padding: 100px 0;
+}
+
+.features__titles {
+    display: flex;
+}
+
+.features__title {
+    flex-basis: 300px;
+    padding-right: 20px;
+}
+
+.features__text {
+    max-width: 330px;
+    text-transform: uppercase;
+    font-size: 36px;
+    margin-bottom: 2px;
+    background: linear-gradient(180deg, #BC10DB 0%, rgba(80, 0, 250, .93) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.tabs {
+    display: grid;
+    grid-template-columns: 300px auto;
+}
+
+.tabs__btn {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.tabs__btn-item {
+    @extend %helvetica-700;
+    margin-bottom: 20px;
+}
+
+.tabs__btn-item--active {
+    color: #070707;
+}
+
+.tabs__content-item {
+    display: grid;
+
+}
+
+.video {
+    width: 280px;
+    height: 150px;
+    background-image: url(../images/content-bg.avif);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: flex-start;
+    padding: 9px 10px;
+}
+
+.video__btn {
+
+}
+
+.video span {
+
 }
