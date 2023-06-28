@@ -1,0 +1,31 @@
+a {
+    color: inherit;
+}
+
+body {
+    @extend %helvetica-400;
+    font-size: 16px;
+    line-height: 1.4;
+    color: #5C5C5E;
+}
+
+button {
+    color: inherit;
+    font-size: inherit;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    padding: 0;
+}
+
+.container {
+    max-width: 1220px;
+    padding: 0 10px;
+    margin: 0 auto;
+}
+
+.section-title {
+    text-transform: uppercase;
+    @extend %helvetica-400;
+}
