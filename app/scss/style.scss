@@ -133,7 +133,7 @@
 .tabs__btn {
     display: flex;
     flex-direction: column;
-    align-items: start;
+    align-items: flex-start;
 }
 
 .tabs__btn-item {
@@ -145,12 +145,39 @@
     color: #070707;
 }
 
+.tabs__content {
+    position: relative;
+    min-width: 300px;
+}
+
 .tabs__content-item {
     display: grid;
+    grid-template-columns: auto 280px;
+    grid-template-rows: auto 150px;
+    gap: 40px;
+    opacity: 0;
+    position: absolute;
+    transition: opacity .3s ease;
+}
 
+.tabs__content-item--active {
+    opacity: 1;
+}
+
+
+.tabs__content-img {
+    grid-row: 1/-1;
+    align-self: stretch;
+}
+
+.tabs__content-box h3 {
+    @extend %helvetica-400;
+    font-size: 24px;
+    margin-bottom: 5px;
 }
 
 .video {
+    grid-column: 2/3;
     width: 280px;
     height: 150px;
     background-image: url(../images/content-bg.avif);
@@ -159,15 +186,91 @@
     background-size: cover;
     display: flex;
     flex-direction: column;
-    justify-content: end;
+    justify-content: flex-end;
     align-items: flex-start;
     padding: 9px 10px;
 }
 
 .video__btn {
-
+    margin-left: 22px;
 }
 
 .video span {
+    font-size: 13px;
+    color: #F6F4F5;
+}
 
+
+/*game section*/
+.game {
+    margin-bottom: 100px;
+}
+
+.game__title {
+    margin-bottom: 50px;
+}
+
+.game__inner {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.game__descr {
+    padding-right: 10px;
+}
+
+.game__descr-title {
+    text-transform: uppercase;
+    background: linear-gradient(180deg, #BC10DB 0%, rgba(80, 0, 250, .93) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.game__descr-text {
+    margin-bottom: 24px;
+}
+
+.game__link {
+    display: inline-block;
+    background: linear-gradient(180deg, #BC10DB 0%, rgba(80, 0, 250, .93) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    @extend %helvetica-700;
+    text-transform: uppercase;
+    padding: 16px 15px 12px;
+    width: 225px;
+    text-align: center;
+    border: 1px solid #BC10DB;
+}
+
+.game__item {
+    border: 1px solid #BC10DB;
+    padding: 20px 20px 18px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.game__item-img {
+    margin-bottom: 10px;
+}
+
+.game__item-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+    @extend %helvetica-400;
+    color: #070707;
+}
+
+.game__item-text {
+    margin-bottom: 30px;
+}
+
+.game__item-link {
+    background: linear-gradient(180deg, #BC10DB 0%, rgba(80, 0, 250, .93) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-top: auto;
 }
