@@ -23,3 +23,4 @@ function open (evt) {
     document.querySelector(`#${button}`).classList.add('tabs__content-item--active');
 
 }
+
